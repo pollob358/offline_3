@@ -1,0 +1,175 @@
+# ==========================================================
+# ------------------ STANDALONE COURSES --------------------
+# ==========================================================
+
+COURSE:Physics
+LESSON:Classical Mechanics,1.5,10
+LESSON:Thermodynamics,1.2,8
+LESSON:Electromagnetism,1.5,12
+LESSON:Optics,1.0,7
+LESSON:Quantum Basics,1.3,13
+ENDCOURSE
+
+COURSE:Chemistry
+LESSON:Atomic Structure,1.2,9
+LESSON:Organic Chemistry,1.5,12
+LESSON:Inorganic Chemistry,1.2,8
+LESSON:Chemical Bonding,1.0,7
+LESSON:Reaction Kinetics,1.3,9
+ENDCOURSE
+
+COURSE:Biology
+LESSON:Cell Structure,1.0,7
+LESSON:Genetics,1.5,12
+LESSON:Human Physiology,1.5,11
+LESSON:Evolution Theory,1.2,8
+LESSON:Microbiology,1.3,9
+ENDCOURSE
+
+COURSE:Advanced Mathematics
+LESSON:Calculus I,1.5,12
+LESSON:Calculus II,1.5,12
+LESSON:Linear Algebra,1.5,11
+LESSON:Differential Equations,1.5,10
+LESSON:Probability Theory,1.2,10
+ENDCOURSE
+
+COURSE:Accounting
+LESSON:Principles of Accounting,1.2,8
+LESSON:Financial Statements,1.5,10
+LESSON:Cost Accounting,1.3,9
+LESSON:Taxation Basics,1.2,7
+LESSON:Auditing,1.3,8
+ENDCOURSE
+
+COURSE:Marketing
+LESSON:Marketing Fundamentals,1.0,6
+LESSON:Consumer Behavior,1.2,8
+LESSON:Brand Management,1.3,9
+LESSON:Digital Marketing,1.5,10
+LESSON:Market Research,1.2,7
+ENDCOURSE
+
+COURSE:Finance
+LESSON:Time Value of Money,1.3,9
+LESSON:Investment Analysis,1.5,12
+LESSON:Risk Management,1.2,8
+LESSON:Corporate Finance,1.5,11
+LESSON:Financial Markets,1.2,8
+ENDCOURSE
+
+COURSE:Economics
+LESSON:Microeconomics,1.5,11
+LESSON:Macroeconomics,1.5,11
+LESSON:Supply and Demand,1.2,8
+LESSON:Inflation and GDP,1.2,7
+LESSON:International Trade,1.3,9
+ENDCOURSE
+
+COURSE:History
+LESSON:Ancient Civilizations,1.3,8
+LESSON:Medieval Era,1.2,7
+LESSON:Modern History,1.5,10
+LESSON:World Wars,1.5,10
+LESSON:Post-Colonial Era,1.2,8
+ENDCOURSE
+
+COURSE:Literature
+LESSON:Poetry Analysis,1.0,6
+LESSON:Shakespearean Drama,1.3,9
+LESSON:Modern Novels,1.5,10
+LESSON:Literary Criticism,1.2,7
+LESSON:Comparative Literature,1.3,8
+ENDCOURSE
+
+COURSE:Philosophy
+LESSON:Ancient Philosophy,1.2,7
+LESSON:Ethics,1.3,8
+LESSON:Logic and Reasoning,1.5,10
+LESSON:Political Philosophy,1.2,7
+LESSON:Modern Philosophy,1.3,8
+ENDCOURSE
+
+COURSE:Programming Fundamentals
+LESSON:Java Basics,1.5,12
+LESSON:Object-Oriented Programming,1.5,13
+LESSON:Exception Handling,1.2,8
+LESSON:Collections Framework,1.3,9
+LESSON:File Handling,1.2,8
+ENDCOURSE
+
+COURSE:Data Structures
+LESSON:Arrays and Lists,1.2,9
+LESSON:Stacks and Queues,1.3,9
+LESSON:Trees,1.5,12
+LESSON:Graphs,1.5,12
+LESSON:Hashing,1.3,10
+ENDCOURSE
+
+COURSE:Algorithms
+LESSON:Sorting Algorithms,1.5,11
+LESSON:Searching Techniques,1.2,8
+LESSON:Dynamic Programming,1.5,13
+LESSON:Greedy Algorithms,1.3,9
+LESSON:Graph Algorithms,1.5,12
+ENDCOURSE
+
+COURSE:Database Systems
+LESSON:ER Modeling,1.3,9
+LESSON:SQL Basics,1.5,11
+LESSON:Normalization,1.2,8
+LESSON:Transactions and Concurrency,1.3,9
+LESSON:Indexing Techniques,1.2,8
+ENDCOURSE
+
+COURSE:Web Development
+LESSON:HTML & CSS,1.3,8
+LESSON:JavaScript Basics,1.5,11
+LESSON:Backend Fundamentals,1.5,12
+LESSON:REST APIs,1.2,9
+LESSON:Deployment Basics,1.3,8
+ENDCOURSE
+
+
+# ==========================================================
+# ----------------------- MODULES --------------------------
+# ==========================================================
+
+MODULE:Science Module
+ADDCOURSE:Physics
+ADDCOURSE:Chemistry
+ADDCOURSE:Biology
+ADDCOURSE:Advanced Mathematics
+ENDMODULE
+
+MODULE:Commerce Module
+ADDCOURSE:Accounting
+ADDCOURSE:Marketing
+ADDCOURSE:Finance
+ADDCOURSE:Economics
+ENDMODULE
+
+MODULE:Arts & Humanities Module
+ADDCOURSE:History
+ADDCOURSE:Literature
+ADDCOURSE:Philosophy
+ENDMODULE
+
+MODULE:Computer Science Core Module
+ADDCOURSE:Programming Fundamentals
+ADDCOURSE:Data Structures
+ADDCOURSE:Algorithms
+ADDCOURSE:Database Systems
+ENDMODULE
+
+MODULE:Full Stack Development Module
+ADDCOURSE:Programming Fundamentals
+ADDCOURSE:Database Systems
+ADDCOURSE:Web Development
+ENDMODULE
+
+MODULE:Advanced Logical Thinking Module
+ADDCOURSE:Advanced Mathematics
+ADDCOURSE:Algorithms
+ADDCOURSE:Philosophy
+ENDMODULE
