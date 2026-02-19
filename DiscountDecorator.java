@@ -6,8 +6,8 @@ public abstract class DiscountDecorator extends Cart {
     }
 
     @Override
-    public void addContents(Content content,boolean module) {
-        cart.addContents(content,module);
+    public void addContents(Content content) {
+        cart.addContents(content);
     }
 
     @Override

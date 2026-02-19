@@ -30,13 +30,11 @@ public class Main {
         science2.haspracticeSheet=true;
         science2.hasLiveMentor=true;
         Cart cart=new Cart();
-        Content scienceModule=science1;
-        scienceModule=new PracticeQuestionAddonDecorator(scienceModule);
-        scienceModule=new LiveMentorAddonDecorator(scienceModule);
-        cart.addContents(lesson5,false);
-        cart.addContents(scienceModule,true);
-        scienceModule=science2;
-        cart.addContents(scienceModule,true);
+        science1=new PracticeQuestionAddonDecorator(science1);
+        science1=new LiveMentorAddonDecorator(science1);
+        cart.addContents(lesson5);
+        cart.addContents(science1);
+        cart.addContents(science2);
         cart=new MultiModuleDiscountDecorator(cart);
         cart=new SpecialDiscountDecorator(cart);
         cart=new DevelopingDiscountDecorator(cart);

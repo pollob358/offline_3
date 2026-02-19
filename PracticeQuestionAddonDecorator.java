@@ -1,7 +1,6 @@
-public class PracticeQuestionAddonDecorator implements Content{
-    Content module;
-    public PracticeQuestionAddonDecorator(Content module){
-         this.module=module;
+public class PracticeQuestionAddonDecorator extends ModuleDecorator {
+    public PracticeQuestionAddonDecorator(Module module){
+         super(module);
     }
     @Override
     public double getduration() {

@@ -1,7 +1,6 @@
-public class LiveMentorAddonDecorator implements Content{
-    Content module;
-    public LiveMentorAddonDecorator(Content module){
-         this.module=module;
+public class LiveMentorAddonDecorator extends ModuleDecorator{
+    public LiveMentorAddonDecorator(Module module){
+         super(module);
     }
     @Override
     public double getduration() {

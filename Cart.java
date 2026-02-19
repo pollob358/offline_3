@@ -9,9 +9,9 @@ public class Cart{
         contents=new ArrayList<>();
         moduleCount=0;
     }
-    public void addContents(Content content,boolean module){
+    public void addContents(Content content){
         contents.add(content);
-        if(module){
+        if(content instanceof Module){
             moduleCount+=1;
         }
     }
