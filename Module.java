@@ -3,8 +3,6 @@ import java.util.List;
 
 public class Module implements Content{
     private List<Course>courses=new ArrayList<>();
-    private double duration;
-    private double price;
     private String name;
     public boolean haspracticeSheet;
     public boolean hasLiveMentor;
@@ -15,40 +13,40 @@ public class Module implements Content{
     }
     public void addCourse(Course course){
         courses.add(course);
-        this.duration+=course.getduration();
-        this.price+=course.calculatePrice();
     }
     public void removeCourse(Course course){
         courses.remove(course);
-        this.duration-=course.getduration();
-        this.price-=course.calculatePrice();
     }
     @Override
-    public double getduration() {
-        return duration;
-    }
-    public void setprice(double price){
-        this.price=price;
+    public double getDuration() {
+        double total=0;
+        for(var c:courses){
+            total+=c.getDuration();
+        }
+        return total;
     }
     @Override
     public double calculatePrice() {
-        return price;
+        double total=0;
+        for(var c:courses){
+            total+=c.calculatePrice();
+        }
+        return total;
     }
 
     @Override
     public String getName() {
         return name;
     }
+    public List<Course>getCourses(){
+        return courses;
+    }
+    
     @Override
     public void showDetails(String indent) {
-        System.out.println(indent + "Module: " + name + " | Price: $" + price + " | Duration: " + duration + "h");
+        System.out.println(indent + "Module: " + name + " | Price: " + this.calculatePrice() + " taka" + "| Duration: " + this.getDuration() + "h");
         for (Course c : courses) {
         c.showDetails(indent + "   ");
        }
     }
-
-    public void setPrice(double price){
-        this.price=price;
-    }
-    
 }

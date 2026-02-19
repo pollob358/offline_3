@@ -1,3 +1,5 @@
+import java.util.List;
+
 public abstract class ModuleDecorator extends Module {
 
     protected Module module;
@@ -8,8 +10,8 @@ public abstract class ModuleDecorator extends Module {
     }
 
     @Override
-    public double getduration() {
-        return module.getduration();
+    public double getDuration() {
+        return module.getDuration();
     }
 
     @Override
@@ -17,18 +19,12 @@ public abstract class ModuleDecorator extends Module {
         return module.calculatePrice();
     }
 
+    public List<Course>getCourses(){
+        return module.getCourses();
+    }
+
     @Override
     public String getName() {
         return module.getName();
-    }
-
-    @Override
-    public void showDetails(String indent) {
-        module.showDetails(indent);
-    }
-
-    @Override
-    public void setprice(double price) {
-        module.setprice(price);
     }
 }

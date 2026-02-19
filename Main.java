@@ -29,7 +29,7 @@ public class Main {
         science2.addCourse(math);
         science2.haspracticeSheet=true;
         science2.hasLiveMentor=true;
-        Cart cart=new Cart();
+        Cart cart=new Cart("first cart");
         science1=new PracticeQuestionAddonDecorator(science1);
         science1=new LiveMentorAddonDecorator(science1);
         cart.addContents(lesson5);
@@ -40,6 +40,6 @@ public class Main {
         cart=new DevelopingDiscountDecorator(cart);
         boolean flag=true;
         cart.setDeveloping(flag);
-        System.out.println(cart.calculatePrice());
+        cart.showDetails(" ");
     }
 }

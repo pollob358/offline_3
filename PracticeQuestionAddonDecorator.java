@@ -3,12 +3,11 @@ public class PracticeQuestionAddonDecorator extends ModuleDecorator {
          super(module);
     }
     @Override
-    public double getduration() {
-       return module.getduration();
+    public double getDuration() {
+       return module.getDuration();
     }
     @Override
     public double calculatePrice() {
-        System.out.println("yo1");
        return module.calculatePrice()+10;
     }
     @Override
@@ -18,11 +17,6 @@ public class PracticeQuestionAddonDecorator extends ModuleDecorator {
     @Override
     public void showDetails(String indent) {
         module.showDetails(indent);
-    }
-    @Override
-    public void setprice(double price) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setprice'");
     }
 
 }

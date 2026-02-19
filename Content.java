@@ -1,7 +1,6 @@
 public interface Content{
-    double getduration();
+    double getDuration();
     double calculatePrice();
-    String getName();     
-    void setprice(double price);            
+    String getName();           
     void showDetails(String indent);
 }

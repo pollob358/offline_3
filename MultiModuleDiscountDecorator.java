@@ -1,4 +1,4 @@
-public class MultiModuleDiscountDecorator extends DiscountDecorator {
+public class MultiModuleDiscountDecorator extends CartDecorator {
 
     public MultiModuleDiscountDecorator(Cart cart) {
         super(cart);
@@ -6,9 +6,7 @@ public class MultiModuleDiscountDecorator extends DiscountDecorator {
 
     @Override
     public double calculatePrice() {
-        System.out.println("yo3");
         double price = cart.calculatePrice();
-        System.out.println("discount chhara price"+ price);
         if(cart.getCount() >= 2){
             price -= 15;
         }

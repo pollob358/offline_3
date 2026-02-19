@@ -8,13 +8,12 @@ public class Lesson implements Content {
         this.price=price;
     }
     @Override
-    public double getduration() {
+    public double getDuration() {
        return duration;
     }
 
     @Override
     public double calculatePrice() {
-        // TODO Auto-generated method stub
         return price;
     }
 
@@ -24,12 +23,10 @@ public class Lesson implements Content {
     }
     @Override
     public void showDetails(String indent) {
-        System.out.println(indent + "Lesson: " + name + " | Duration: " + duration + "h");
+        System.out.println(indent + "Lesson: " + name + " price: "+price+ " taka" +" | Duration: " + duration + "h");
     }
-    @Override
     public void setprice(double price) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setprice'");
+        this.price=price;
     }
     
 }
