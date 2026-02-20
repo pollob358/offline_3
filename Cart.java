@@ -15,7 +15,7 @@ public class Cart implements Content{
         moduleCount=0;
         this.name=name;
     }
-    public void addContents(Content content){
+    public void addComponents(Content content){
         contents.add(content);
         if(content instanceof Module){
             moduleCount+=1;

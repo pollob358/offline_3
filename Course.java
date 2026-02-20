@@ -2,16 +2,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Course implements Content{
-    private List<Lesson>lessons=new ArrayList<>();
+    private List<Content>lessons=new ArrayList<>();
     private String name;
     public Course(String name){
         this.name=name;
     }
-    public void addlesson(Lesson lesson){
-        lessons.add(lesson);
-    }
-    public void removelesson(Lesson lesson){
-        lessons.remove(lesson);
+    @Override
+    public void addComponents(Content lesson) {
+        if(lesson instanceof Lesson)lessons.add(lesson);
+        else System.out.println("Course can only add Lesson");
     }
     @Override
     public double getDuration() {
@@ -38,7 +37,7 @@ public class Course implements Content{
     @Override
     public void showDetails(String indent) {
         System.out.println(indent + "Course: " + name + " | Price: " + this.calculatePrice() +" taka"+ " | Duration: " + this.getDuration() + "h");
-        for (Lesson l : lessons) {
+        for (Content l : lessons) {
             l.showDetails(indent + "   ");
         }
     }

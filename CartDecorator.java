@@ -8,8 +8,8 @@ public abstract class CartDecorator extends Cart {
     }
 
     @Override
-    public void addContents(Content content) {
-        cart.addContents(content);
+    public void addComponents(Content content) {
+        cart.addComponents(content);
     }
 
     @Override

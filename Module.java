@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Module implements Content{
-    private List<Course>courses=new ArrayList<>();
+    private List<Content>courses=new ArrayList<>();
     private String name;
     public boolean haspracticeSheet;
     public boolean hasLiveMentor;
@@ -11,11 +11,10 @@ public class Module implements Content{
         haspracticeSheet=false;
         hasLiveMentor=false;
     }
-    public void addCourse(Course course){
-        courses.add(course);
-    }
-    public void removeCourse(Course course){
-        courses.remove(course);
+    @Override
+    public void addComponents(Content course) {
+        if(course instanceof Course) courses.add(course);
+       else System.out.println("Module can only add Course");
     }
     @Override
     public double getDuration() {
@@ -38,14 +37,14 @@ public class Module implements Content{
     public String getName() {
         return name;
     }
-    public List<Course>getCourses(){
+    public List<Content>getCourses(){
         return courses;
     }
     
     @Override
     public void showDetails(String indent) {
         System.out.println(indent + "Module: " + name + " | Price: " + this.calculatePrice() + " taka" + "| Duration: " + this.getDuration() + "h");
-        for (Course c : courses) {
+        for (Content c : courses) {
         c.showDetails(indent + "   ");
        }
     }

@@ -16,7 +16,9 @@ public class PracticeQuestionAddonDecorator extends ModuleDecorator {
     }
     @Override
     public void showDetails(String indent) {
-        module.showDetails(indent);
+        System.out.println(indent + "Module: " + this.getName() + " | Price: " + this.calculatePrice() + " taka" + "| Duration: " + this.getDuration() + "h");
+        for (Content c : this.getCourses()) {
+        c.showDetails(indent + "   ");
+       }
     }
-
 }

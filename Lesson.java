@@ -28,5 +28,9 @@ public class Lesson implements Content {
     public void setprice(double price) {
         this.price=price;
     }
+    @Override
+    public void addComponents(Content content) {
+        System.out.println("Lesson can't add any components");
+    }
     
 }

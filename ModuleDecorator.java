@@ -19,7 +19,7 @@ public abstract class ModuleDecorator extends Module {
         return module.calculatePrice();
     }
 
-    public List<Course>getCourses(){
+    public List<Content>getCourses(){
         return module.getCourses();
     }
 

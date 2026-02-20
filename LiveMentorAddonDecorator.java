@@ -16,13 +16,13 @@ public class LiveMentorAddonDecorator extends ModuleDecorator{
     public String getName() {
        return module.getName();
     }
-    public List<Course>getCourses(){
+    public List<Content>getCourses(){
       return module.getCourses();
     }
     @Override
     public void showDetails(String indent) {
         System.out.println(indent + "Module: " + this.getName() + " | Price: " + this.calculatePrice() + " taka" + "| Duration: " + this.getDuration() + "h");
-        for (Course c : this.getCourses()) {
+        for (Content c : this.getCourses()) {
         c.showDetails(indent + "   ");
        }
     }
